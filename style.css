@@ -30,23 +30,36 @@ body {
 }
 
 .slider > a {
+    /* 다양한 레이아웃 조작 가능 */
     display: inline-flex;
+    /* 가로넓이 */
     width: 1.5rem;
+    /* 세로넓이 */
     height: 1.5rem;
+    /* 배경색 */
     background: white;
+    /* A태그 밑줄 제거 */
     text-decoration: none;
+    /* 수직 수평 정렬 */
     align-items: center;
     justify-content: center;
+    /* 원 모양으로 만드는 수치임 */
     border-radius: 50%;
+    /* 하단마진만 줌 */
     margin: 0 0 0.5rem 0;
+    /* 상대적 요소 배치 */
     position: relative;
-  }
-  .slider > a:active {
-    top: 1px;
-  }
-  .slider > a:focus {
+}
+
+/* 상단 버튼 누르면 아래로 3px 움직임 */
+.slider > a:active {
+    top: 3px;
+}
+
+/* 누르면 배경 색 검정색으로 바뀜 */
+.slider > a:focus {
     background: #000;
-  }
+}
 
 
 /* 잘 이해 안되는 부분임 */
@@ -77,20 +90,31 @@ body {
 
 
 .slides > div {
+  /* 캐러셀 메인 영역 자동으로 메인지점에 묶어줌 */
   scroll-snap-align: start;
+  /* 이 속성은 "div" 요소가 
+  부모 플렉스 컨테이너 내에서 축소되지 않도록 설정합니다.
+   즉, 요소가 화면 크기에 맞게 축소되지 않습니다 
+   이해하기 힘듬 걍 한번 더 찾아보세요 */
   flex-shrink: 0;
+  /* 가로 영역 */
   width: 300px;
+  /* 세로 영역 */
   height: 300px;
+  /* 테두리 둥글 */
   border-radius: 10px;
+  /* 배경 색 */
   background: #eee;
-  transform-origin: center center;
-  transform: scale(1);
-  transition: transform 0.5s;
-  position: relative;
+  /*  */
+  /* 영역 잡기 */
   display: flex;
+  /* 수평 수직 정렬 */
   justify-content: center;
   align-items: center;
+  /* 글자크기 */
   font-size: 100px;
+  /* 글자 색 */
+  color: midnightblue;
 }
 
 /* 5번의 우측에 여백을 주지 않음 */
